@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Lipatov Nikita
+      changes:
+        - createTable:
+            tableName: exam_user
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: group
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: marks
+                  type: int
+
+  - changeSet:
+      id: 2
+      author: Lipatov Nikita
+      changes:
+        - createTable:
+            tableName: college
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: link
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
